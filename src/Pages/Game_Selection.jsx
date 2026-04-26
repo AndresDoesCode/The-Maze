@@ -3,7 +3,7 @@ import { StrictMode } from 'react'
 function Game_Selection(){
     return(
         <>
-            <p> Hello </p>
+            <p> Testing </p>
         </>
     )
 }
