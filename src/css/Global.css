@@ -1,0 +1,22 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to bottom,  rgb(179, 179, 179), rgb(255,255,255));
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#root{
+    height: 100%;
+}
+
+h1, p {
+    font-family: "Press Start 2P", system-ui;
+}
