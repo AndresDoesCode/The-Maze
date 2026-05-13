@@ -13,22 +13,11 @@ class Cell(IntFlag):
 temp_level_data = {
     "Level": 1,
     "Unlocked": True,
-                #   #   #   #
-    # "Maze": [[0,0,0,0,0,1,0,0,0],
-    #          [0,0,1,0,0,0,0,0,0],  #Row for walls
-    #          [0,0,0,0,0,0,0,0,0],
-    #          [0,0,0,0,0,0,0,0,1],  #Row for walls
-    #          [0,1,0,0,0,0,0,0,0],
-    #          [0,0,0,0,1,0,0,0,0],  #Row for walls
-    #          [0,0,0,0,0,0,0,0,0],
-    #          [0,0,1,0,0,0,0,0,1],  #Row for walls
-    #          [0,0,0,0,0,1,0,0,2]
-    #          ],
-    "Maze": [[(Cell.N | Cell.W | Cell.BALL),    (Cell.N | Cell.S),  (Cell.N, Cell.E),   (Cell.N, Cell.W),   (Cell.N, Cell.E)],
-             [(Cell.W),                         (Cell.N),           0,                  0,                  (Cell.S | Cell.E)],
-             [(Cell.W | Cell.E),                (Cell.W),           (Cell.S),           0,                  (Cell.N | Cell.E)],
-             [(Cell.W),                         (Cell.S),           (Cell.N),           0,                  (Cell.S, Cell.E)],
-             [(Cell.W | Cell.S),                (Cell.N | Cell.S),  (Cell.S | Cell.E),  (Cell.S | Cell.W),  (Cell.N | Cell.S | Cell.E | Cell.BIT)]
+    "Maze": [[(Cell.BALL),  (Cell.S),  (Cell.E),    (Cell.W),   0],
+             [0,            (Cell.N),   0,          0,          (Cell.S)],
+             [(Cell.E),     (Cell.W),   (Cell.S),   0,          (Cell.N)],
+             [0,            (Cell.S),   (Cell.N),   0,          (Cell.S)],
+             [0,            (Cell.N),   (Cell.E),   (Cell.W),   (Cell.N | Cell.BIT)]
              ],
     "num_row": 5,
     "num_col": 5

@@ -11,7 +11,7 @@ export default function Maze({grid, rows, columns}){
 
 
     return(
-        <>
+    <>  
             <div 
                 className="Grid-Container"
                 style={{
@@ -30,17 +30,21 @@ export default function Maze({grid, rows, columns}){
                             /* Here is where the actual cell is */
                             <div 
                                 key={`${rowIndex}-${colIndex}`}
-                                className="Grid-Cell"
-                                style={
-                                    {borderBottomColor: "black"}
-                                }
+                                className={`
+                                    Grid-Cell
+                                    ${bitValue & 1 ? "border-top" : ""}
+                                    ${bitValue & 2 ? "border-right" : ""}
+                                    ${bitValue & 4 ? "border-bottom" : ""}
+                                    ${bitValue & 8 ? "border-left" : ""}
+                                `}
                             >
-                                <p>{bitValue}</p>
+                                {bitValue & 16 ? <div className="Ball"/> : null}
+                                {bitValue & 32 ? <div className="Bit"/> : null}
                             </div>
                         ))}
                     </div>
                 ))}   
-            </div>     
+            </div>    
         </>
     )
 }

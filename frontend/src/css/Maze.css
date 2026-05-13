@@ -4,12 +4,9 @@
     height: 400px;
     background-color: bisque;
     display: grid;
-
-    /* This is for testing porpuses only */
-    /* border: 0.2em;
-    border-style: solid;
-    border-color: transparent;
-    border-bottom-color: black; */
+    outline: 0.4em;
+    outline-style: solid;
+    outline-color: black;
 }
 
 .Grid-Row {
@@ -20,7 +17,36 @@
     border: 0.2em;
     border-style: solid;
     border-color: transparent;
-    /* Change the border colors however you like outside in the style sections of the div*/
-    /* border-bottom-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.Grid-Cell.border-top {
+    border-top-color: black;
+}
+
+.Grid-Cell.border-bottom {
+    border-bottom-color: black;
+}
+
+.Grid-Cell.border-left {
+    border-left-color: black;
+}
+
+.Grid-Cell.border-right {
+    border-right-color: black;
+}
+
+.Ball {
+    background-color: red;
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+}
+
+.Bit {
+    background-color:darkblue;
+    width: 50%;
+    height: 50%;
+}
