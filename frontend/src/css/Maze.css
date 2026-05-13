@@ -1,0 +1,26 @@
+.Grid-Container{
+    margin: 1em;
+    width: 400px;
+    height: 400px;
+    background-color: bisque;
+    display: grid;
+
+    /* This is for testing porpuses only */
+    /* border: 0.2em;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: black; */
+}
+
+.Grid-Row {
+    display: grid;
+}
+
+.Grid-Cell {
+    border: 0.2em;
+    border-style: solid;
+    border-color: transparent;
+    /* Change the border colors however you like outside in the style sections of the div*/
+    /* border-bottom-color: black; */
+}
+
